@@ -1,8 +1,7 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import Boton from './Boton'
 
-
-const AddBook = () => {
+const AddBook = ({ titulo, handlerIitulo, descripcion, handlerDescripcion, autor, handlerAutor, agregarLibros }) => {
     return (
         <View style={styles.container}>
 
@@ -11,6 +10,8 @@ const AddBook = () => {
                 placeholder='Título del libro'
                 placeholderTextColor="#FFB996"
                 maxLength={25}
+                value={titulo}
+                onChangeText={handlerIitulo}
             />
 
             <TextInput
@@ -18,6 +19,8 @@ const AddBook = () => {
                 placeholder='Autor del libro'
                 placeholderTextColor="#FFB996"
                 maxLength={25}
+                value={autor}
+                onChangeText={handlerAutor}
             />
 
             <TextInput
@@ -25,12 +28,17 @@ const AddBook = () => {
                 placeholder='Reseña del libro'
                 placeholderTextColor="#FFB996"
                 multiline
-                numberOfLines={3}
-                maxLength={100}
+                numberOfLines={2}
+                maxLength={80}
+                value={descripcion}
+                onChangeText={handlerDescripcion}
             />
 
-        <Boton />
-        
+            <Boton
+                title={"Guardar libro"}
+                onPress={agregarLibros}
+            />
+
         </View>
     )
 }
