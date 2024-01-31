@@ -10,6 +10,7 @@ import { useState } from 'react';
 // Componentes
 import Imagen from './src/components/Imagen';
 import AddBook from './src/components/AddBook';
+import BookList from './src/components/BookList';
 
 
 export default function App() {
@@ -49,6 +50,15 @@ export default function App() {
     setAutor("")
   }
 
+  const updateLectura = (id) => {
+    setLibros(libros.map(libro => {
+      if (libro.id === id) {
+        return { ...libro, ...{ leido: !libro.leido } }
+      }
+      return libro
+    }))
+  }
+
   return (
     <View style={styles.container}>
       {/* Encabezado */}
@@ -65,6 +75,11 @@ export default function App() {
         agregarLibros={agregarLibros}
       />
 
+      {/* Muestra los libros */}
+      <BookList
+        libros={libros}
+        updateLectura={updateLectura}
+      />
     </View>
   );
 }

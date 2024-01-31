@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     borderRadius: 10,
     alignSelf: "flex-end",
-    justifyContent: "center",
     alignItems: "center"
   },
 
