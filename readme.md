@@ -1,4 +1,11 @@
-<h1 align="center"> Listado de Libros </h1>
+<p align=center>
+    <img 
+        src="https://cdn-icons-png.flaticon.com/512/5833/5833290.png"
+        width: "25%"
+    >
+</p>
+
+<h1 align="center"> 📚 Listado de Libros 📚 </h1>
 
 <h4 align="center">
     :construction: Proyecto en construcción :construction:
