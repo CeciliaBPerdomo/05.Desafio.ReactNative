@@ -20,6 +20,10 @@ export default function App() {
   const [descripcion, setDescripcion] = useState("")
   const [libros, setLibros] = useState([])
 
+  // Modal para eliminar
+  const [verModal, setVerModal] = useState(false)
+  const [libroSelected, setLibroSelected] = useState({})
+
   const handlerIitulo = (t) => {
     setTitulo(t)
   }
@@ -57,6 +61,16 @@ export default function App() {
       }
       return libro
     }))
+  }
+
+  const handlerModal = (libro) => {
+    setLibroSelected(libro)
+    setVerModal(!verModal)
+  }
+
+  const deleteBook = () => {
+    setLibros(libros.filter(libros => libros.id != libroSelected.id))
+    setVerModal(!verModal)
   }
 
   return (
