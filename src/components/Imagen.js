@@ -30,5 +30,7 @@ const styles = StyleSheet.create({
     texto: {
         fontSize: 24,
         fontWeight: 'bold',
+        marginBottom: 8,
+        color: "#FFB996"
     }
 })
