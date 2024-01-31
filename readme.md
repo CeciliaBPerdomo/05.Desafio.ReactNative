@@ -1,7 +1,7 @@
 <p align=center>
     <img 
         src="https://cdn-icons-png.flaticon.com/512/5833/5833290.png"
-        width: "25%"
+        width: "5%"
     >
 </p>
 
