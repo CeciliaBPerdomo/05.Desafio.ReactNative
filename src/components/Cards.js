@@ -2,7 +2,7 @@ import { StyleSheet, Switch, Text, View } from 'react-native'
 import React from 'react'
 import Boton from './Boton'
 
-const Cards = ({ item, updateLectura }) => {
+const Cards = ({ item, updateLectura, handlerModal }) => {
     return (
         <View
             key={item.id}
@@ -40,6 +40,7 @@ const Cards = ({ item, updateLectura }) => {
 
             <Boton
                 title={"Eliminar libro"}
+                onPress={() => handlerModal(item)}
             />
 
         </View>

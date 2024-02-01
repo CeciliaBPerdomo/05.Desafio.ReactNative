@@ -11,6 +11,7 @@ import { useState } from 'react';
 import Imagen from './src/components/Imagen';
 import AddBook from './src/components/AddBook';
 import BookList from './src/components/BookList';
+import ModalDelete from './src/components/ModalDelete';
 
 
 export default function App() {
@@ -93,7 +94,17 @@ export default function App() {
       <BookList
         libros={libros}
         updateLectura={updateLectura}
+        handlerModal={handlerModal}
       />
+
+      {/* Cuando se quiere borrar, el modal abre para confirmar */}
+      <ModalDelete
+        modalVisible={verModal}
+        libroSelected={libroSelected}
+        handlerModal={handlerModal}
+        deleteBook={deleteBook}
+      />
+
     </View>
   );
 }

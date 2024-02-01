@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native'
 import Cards from './Cards'
 
-const BookList = ({ libros, updateLectura }) => {
+const BookList = ({ libros, updateLectura, handlerModal }) => {
     return (
         <View style={styles.container}>
             <FlatList
@@ -14,6 +14,7 @@ const BookList = ({ libros, updateLectura }) => {
                     <Cards
                         item={item}
                         updateLectura={updateLectura}
+                        handlerModal={handlerModal}
                     />
                 )}
             />
